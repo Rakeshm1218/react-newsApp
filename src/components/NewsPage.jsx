@@ -93,7 +93,7 @@ const NewsPage = () => {
           pageData.map((item) => (
             <div
               key={item.id}
-              className="shadow-md border p-5 mb-10 sm:w-80 lg:w-96"
+              className="shadow-md border p-5 mb-10 sm:w-72 lg:w-96"
             >
               <img src={item.image_url} alt="" className="w-full" />
               <h1 className="">{item.title}</h1>

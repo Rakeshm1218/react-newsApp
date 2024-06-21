@@ -1,5 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-const apiKey = "pub_470006fa89d521ed526ca342341d1723b0c4c";
+
+
+
+const apiKey = import.meta.env.VITE_NewsAPI;
+console.log(apiKey);
 export const newsApi = createApi({
   reducerPath: "news",
   baseQuery: fetchBaseQuery({ baseUrl: `https://newsdata.io/api/1/` }),
