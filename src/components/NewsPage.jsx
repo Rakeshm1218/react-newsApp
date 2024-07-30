@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCategory, setQuery } from "../redux/feature/categorySlice";
 
 const NewsPage = () => {
-  // const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
   // Read the value of category from categorySlice
