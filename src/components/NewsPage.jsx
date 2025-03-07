@@ -5,6 +5,7 @@ import {
 } from "../redux/services/NewsAPI";
 import { useSelector, useDispatch } from "react-redux";
 import { setCategory, setQuery } from "../redux/feature/categorySlice";
+import LOGO from '../assets/logo.png'
 
 const NewsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -62,20 +63,24 @@ const NewsPage = () => {
 
   return (
     <div>
+      <div className="fixed top-0 left-20 w-20"> 
+          <img src={LOGO} alt="" className=""/>
+        </div>
       <div className="shadow-md p-3 text-center sm:flex sm:justify-between sm:items-center sm:w-full px-4 sm:px-20">
-        <div>
+        <div className="pl-56">
           <input
             type="text"
-            className="bg-slate-200 py-1 outline-none px-3"
+            className="bg-neutral-100 rounded-l-xl py-1 outline-none px-3"
             id="searchQuery"
           />
           <button
             className="bg-black text-white px-5 py-1 rounded-r-xl"
             onClick={searchNews}
           >
-            SEARCH
+            Search
           </button>
         </div>
+        
         <select
           onChange={handleCategoryChange}
           className="mt-3 border rounded-lg outline-none p-3 hover:shadow-sm font-bold"
